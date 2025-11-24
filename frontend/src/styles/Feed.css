@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.feed-container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #f0f7ff;
+  padding: 24px;
+}
+
+.feed-title {
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #323232;
+}
+
+.post-input-box {
+  --font-color: #323232;
+  --bg-color: #fff8dc;
+  --main-color: #000;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.post-input {
+  flex: 1;
+  height: 42px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  padding: 6px 12px;
+  font-size: 15px;
+  color: var(--font-color);
+  outline: none;
+}
+
+.post-button {
+  width: 120px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.post-card {
+  border: 2px solid #000;
+  padding: 12px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  box-shadow: 4px 4px #000;
+  border-radius: 5px;
+}

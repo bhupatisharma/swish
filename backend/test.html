@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swish API Tester</title>
+</head>
+<body>
+    <h1>🚀 Swish API Tester</h1>
+    
+    <button onclick="testAPI()">Test Basic API</button>
+    <button onclick="registerUser()">Register User</button>
+    <button onclick="loginUser()">Login User</button>
+    
+    <div id="result"></div>
+
+    <script>
+        async function testAPI() {
+            const response = await fetch('http://localhost:5000/api/test');
+            const data = await response.json();
+            document.getElementById('result').innerHTML = JSON.stringify(data, null, 2);
+        }
+
+        async function registerUser() {
+            const response = await fetch('http://localhost:5000/api/auth/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: "Test User",
+                    email: "test@campus.edu", 
+                    password: "123456"
+                })
+            });
+            const data = await response.json();
+            document.getElementById('result').innerHTML = JSON.stringify(data, null, 2);
+        }
+
+        async function loginUser() {
+            const response = await fetch('http://localhost:5000/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: "test@campus.edu",
+                    password: "123456"
+                })
+            });
+            const data = await response.json();
+            document.getElementById('result').innerHTML = JSON.stringify(data, null, 2);
+        }
+    </script>
+</body>
+</html>

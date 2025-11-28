@@ -79,3 +79,35 @@
   font-size: 14px;
   color: var(--font-color-sub);
 }
+
+.error-message {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: white;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.login-subtitle, .register-subtitle {
+  text-align: center;
+  color: var(--font-color-sub);
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.auth-link {
+  color: #667eea;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.login-footer, .register-footer {
+  margin-top: 20px;
+}
